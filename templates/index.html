@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBX STOCK</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <h1 style="margin-top: 50px;">บันทึก ยอดขาย/รายจ่าย หน้าร้าน</h1>
+    <div class="form">
+        <form action="/save" method="post">
+            <div class="main-box">
+                <div class="head-box">
+                    <div class="date-box">
+                        <label for="date">วันที่ :</label>
+                        <input class='date' type="date" name="date" placeholder=""><br>
+                    </div>
+                    <label for="ec">เงินทอน :</label>
+                    <input type="number" name="ec" min=0 placeholder=0 step=10 value=""><br>
+                    <label for="pee">เงินซื้อของ :</label>
+                    <input type="number" name="pee" placeholder=0 min=0><br>
+                </div>
+                <div class="body-box">
+                    <label for="Ftr">ยอดขายหน้าร้านทั้งหมด :</label>
+                    <input type="number" name="Ftr" placeholder=0 min=0 step=10><br>
+                    <label for="pc">เงินสดในกระเป๋า :</label>
+                    <input type="number" name="pc" placeholder=0 min=0><br>
+                </div>
+                <div class="foot-box">
+                    <label for="sr">ข้าวเหนียว :</label>
+                    <input type="number" name="sr" placeholder=0 min=0 value=""><br>
+                    <label for="cl">โค้ก :</label>
+                    <input type="number" name="cl" placeholder=0 min=0 value=""><br>
+                    <label for="wt">น้ำดื่ม :</label>
+                    <input type="number" name="wt" placeholder=0 min=0 value=""><br>
+                    <label for="fu">เติมน้ำมันรถ :</label>
+                    <input type="number" name="fu" placeholder=0 min=0 step=100 value=""><br>
+                    <label for="ot">อื่น ๆ :</label>
+                    <input type="number" name="ot" placeholder=0 min=0 value=""><br>
+                </div>
+                <button class="button-75" role="button" type="submit"><span class="text">ตรวจสอบ</span></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

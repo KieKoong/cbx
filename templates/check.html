@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBX STOCK</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style_c.css">
+</head>
+<body>
+    <h1 style="margin-top: 50px;">บันทึก ยอดขาย/รายจ่าย หน้าร้าน</h1>
+    <div class="form">
+            <div class="main-box">
+                <div class="head-box">
+                    <div class="date-box">
+                        <label for="date">วันที่ :</label>
+                        <input class='date' style="background-color:aquamarine;" type="date" value="{{date}}" disabled><br>
+                    </div>
+                    <label for="ec">เงินทอน :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{ec}}" disabled><br>
+                    <label for="pee">เงินซื้อของ :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{pee}}" disabled><br>
+                </div>
+                <div class="body-box">
+                    <label for="Ftr">ยอดขายหน้าร้านทั้งหมด :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{Ftr}}" disabled><br>
+                    <label for="pc">เงินสดในกระเป๋า :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{pc}}" disabled><br>
+                </div>
+                <div class="foot-box">
+                    <label for="sr">ข้าวเหนียว :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{sr}}" disabled><br>
+                    <label for="cl">โค้ก :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{cl}}" disabled><br>
+                    <label for="wt">น้ำดื่ม :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{wt}}" disabled><br>
+                    <label for="fu">เติมน้ำมันรถ :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{fu}}" disabled><br>
+                    <label for="ot">อื่น ๆ :</label>
+                    <input type="number" style="background-color:aquamarine;" value="{{ot}}" disabled><br>
+                </div>
+            </div>
+    </div>
+
+    <div class="btn">
+        <button id="backButton" class="button-75" role="button" type="submit"><span class="text">แก้ไข</span></button>
+        <button id="submitButton" class="button-76" role="button" type="submit"><span class="text">บันทึก</span></button>
+    </div>
+    
+    
+
+
+
+
+
+
+
+    <form id="myForm" action="/add" method="post">
+        <input type="hidden" name="date" value="{{date}}"><br>
+        <input type="hidden" name="ec" value="{{ec}}"><br>
+        <input type="hidden" name="pc" value="{{pc}}"><br>
+        <input type="hidden" name="Ftr" value="{{Ftr}}"><br>
+        <input type="hidden" name="pee" value="{{pee}}"><br>
+        <input type="hidden" name="sr" value="{{sr}}"><br>
+        <input type="hidden" name="cl" value="{{cl}}"><br>
+        <input type="hidden" name="wt" value="{{wt}}"><br>
+        <input type="hidden" name="fu" value="{{fu}}"><br>
+        <input type="hidden" name="ot" value="{{ot}}"><br>
+        <input type="hidden" name="total_exp" value="{{total_exp}}"><br>
+        <input type="hidden" name="pocket_balance" value="{{pocket_balance}}"><br>
+        <input type="hidden" name="cash_borrowed" value="{{cash_borrowed}}"><br>
+        <input type="hidden" name="cash_rvn" value="{{cash_rvn}}"><br>
+        <input type="hidden" name="transfer_rvn" value="{{transfer_rvn}}"><br>
+    </form>
+
+    <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+                history.back();
+        });
+    </script>
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function() {
+            var form = document.getElementById("myForm");
+            form.submit();
+        });
+    </script>
+    
+</body>
+</html>
